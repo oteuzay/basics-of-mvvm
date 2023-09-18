@@ -12,6 +12,8 @@
 		8B0B5CF62AB8C74B0001F365 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B0B5CF52AB8C74B0001F365 /* Assets.xcassets */; };
 		8B0B5CF92AB8C74B0001F365 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B0B5CF72AB8C74B0001F365 /* LaunchScreen.storyboard */; };
 		8B0B5D032AB8C7810001F365 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0B5D022AB8C7810001F365 /* MainViewController.swift */; };
+		8B0B5D0F2AB8E4500001F365 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0B5D0E2AB8E4500001F365 /* MainViewModel.swift */; };
+		8B0B5D112AB8E4740001F365 /* MainViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0B5D102AB8E4740001F365 /* MainViewController+TableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		8B0B5CF82AB8C74B0001F365 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B0B5CFA2AB8C74B0001F365 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B0B5D022AB8C7810001F365 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		8B0B5D0E2AB8E4500001F365 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		8B0B5D102AB8E4740001F365 /* MainViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+TableView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +58,8 @@
 		8B0B5CEB2AB8C74A0001F365 /* basics-of-mvvm */ = {
 			isa = PBXGroup;
 			children = (
-				8B0B5D012AB8C75A0001F365 /* Controller */,
+				8B0B5D0D2AB8E4040001F365 /* ViewModel */,
+				8B0B5D0B2AB8E3860001F365 /* Controller */,
 				8B0B5D002AB8C7500001F365 /* Files */,
 			);
 			path = "basics-of-mvvm";
@@ -72,12 +77,21 @@
 			name = Files;
 			sourceTree = "<group>";
 		};
-		8B0B5D012AB8C75A0001F365 /* Controller */ = {
+		8B0B5D0B2AB8E3860001F365 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				8B0B5D022AB8C7810001F365 /* MainViewController.swift */,
+				8B0B5D102AB8E4740001F365 /* MainViewController+TableView.swift */,
 			);
-			name = Controller;
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8B0B5D0D2AB8E4040001F365 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8B0B5D0E2AB8E4500001F365 /* MainViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,8 +165,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B0B5D032AB8C7810001F365 /* MainViewController.swift in Sources */,
+				8B0B5D112AB8E4740001F365 /* MainViewController+TableView.swift in Sources */,
 				8B0B5CED2AB8C74A0001F365 /* AppDelegate.swift in Sources */,
 				8B0B5CEF2AB8C74A0001F365 /* SceneDelegate.swift in Sources */,
+				8B0B5D0F2AB8E4500001F365 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
