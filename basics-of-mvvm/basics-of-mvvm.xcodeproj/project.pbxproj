@@ -19,6 +19,7 @@
 		8B0B5D192AB9BD250001F365 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8B0B5D182AB9BD250001F365 /* Alamofire */; };
 		8B0B5D1C2AB9BFE60001F365 /* University.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0B5D1B2AB9BFE60001F365 /* University.swift */; };
 		8B0B5D1F2AB9C6DA0001F365 /* MainViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0B5D1E2AB9C6DA0001F365 /* MainViewCell.swift */; };
+		8B0B5D212AB9CE9F0001F365 /* MainViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0B5D202AB9CE9F0001F365 /* MainViewCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		8B0B5D152AB9BCAF0001F365 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		8B0B5D1B2AB9BFE60001F365 /* University.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = University.swift; sourceTree = "<group>"; };
 		8B0B5D1E2AB9C6DA0001F365 /* MainViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCell.swift; sourceTree = "<group>"; };
+		8B0B5D202AB9CE9F0001F365 /* MainViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				8B0B5D0E2AB8E4500001F365 /* MainViewModel.swift */,
+				8B0B5D202AB9CE9F0001F365 /* MainViewCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				8B0B5CEF2AB8C74A0001F365 /* SceneDelegate.swift in Sources */,
 				8B0B5D1C2AB9BFE60001F365 /* University.swift in Sources */,
 				8B0B5D0F2AB8E4500001F365 /* MainViewModel.swift in Sources */,
+				8B0B5D212AB9CE9F0001F365 /* MainViewCellViewModel.swift in Sources */,
 				8B0B5D142AB9BBE20001F365 /* ServiceConstant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

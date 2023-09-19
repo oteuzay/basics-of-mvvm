@@ -24,4 +24,9 @@ class MainViewModel {
     func numberOfRowsInSection(_ section: Int) -> Int {
         return self.dataResult.count
     }
+    
+    func createMainViewCellViewModel(model: University) -> MainViewCellViewModel {
+        let cellModel = MainViewCellViewModel(model: model)
+        return cellModel
+    }
 }
