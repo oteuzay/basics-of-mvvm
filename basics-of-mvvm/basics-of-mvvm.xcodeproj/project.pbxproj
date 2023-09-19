@@ -17,6 +17,7 @@
 		8B0B5D142AB9BBE20001F365 /* ServiceConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0B5D132AB9BBE20001F365 /* ServiceConstant.swift */; };
 		8B0B5D162AB9BCAF0001F365 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0B5D152AB9BCAF0001F365 /* Service.swift */; };
 		8B0B5D192AB9BD250001F365 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8B0B5D182AB9BD250001F365 /* Alamofire */; };
+		8B0B5D1C2AB9BFE60001F365 /* University.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0B5D1B2AB9BFE60001F365 /* University.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		8B0B5D102AB8E4740001F365 /* MainViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+TableView.swift"; sourceTree = "<group>"; };
 		8B0B5D132AB9BBE20001F365 /* ServiceConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceConstant.swift; sourceTree = "<group>"; };
 		8B0B5D152AB9BCAF0001F365 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		8B0B5D1B2AB9BFE60001F365 /* University.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = University.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		8B0B5CEB2AB8C74A0001F365 /* basics-of-mvvm */ = {
 			isa = PBXGroup;
 			children = (
+				8B0B5D1A2AB9BFD80001F365 /* Model */,
 				8B0B5D122AB9BB4F0001F365 /* Service */,
 				8B0B5D0D2AB8E4040001F365 /* ViewModel */,
 				8B0B5D0B2AB8E3860001F365 /* Controller */,
@@ -108,6 +111,14 @@
 				8B0B5D152AB9BCAF0001F365 /* Service.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		8B0B5D1A2AB9BFD80001F365 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8B0B5D1B2AB9BFE60001F365 /* University.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,6 +202,7 @@
 				8B0B5D112AB8E4740001F365 /* MainViewController+TableView.swift in Sources */,
 				8B0B5CED2AB8C74A0001F365 /* AppDelegate.swift in Sources */,
 				8B0B5CEF2AB8C74A0001F365 /* SceneDelegate.swift in Sources */,
+				8B0B5D1C2AB9BFE60001F365 /* University.swift in Sources */,
 				8B0B5D0F2AB8E4500001F365 /* MainViewModel.swift in Sources */,
 				8B0B5D142AB9BBE20001F365 /* ServiceConstant.swift in Sources */,
 			);
