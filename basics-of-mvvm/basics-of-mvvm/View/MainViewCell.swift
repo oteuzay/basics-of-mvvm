@@ -8,24 +8,22 @@ class MainViewCell: UITableViewCell {
             configure()
         }
     }
-    
-    private let universityImageView: UIImageView = {
-        let image = #imageLiteral(resourceName: "university")
-        let imageView = UIImageView()
         
-        imageView.clipsToBounds = true
-        imageView.contentMode = .scaleAspectFit
-        imageView.image = image
-        imageView.widthAnchor.constraint(equalToConstant: 60).isActive = true
-        
-        return imageView
-    }()
-    
     private let universityNameLabel: UILabel = {
         let label = UILabel()
         
-        label.text = "University Name"
-        label.font = UIFont.boldSystemFont(ofSize: 16)
+        label.text = "Name"
+        label.textColor = .darkText
+        
+        return label
+    }()
+    
+    private let universityURLLabel: UILabel = {
+        let label = UILabel()
+        
+        label.text = "URL"
+        label.textColor = .gray
+        label.font = UIFont.systemFont(ofSize: 14)
         
         return label
     }()
@@ -46,27 +44,40 @@ class MainViewCell: UITableViewCell {
 
 extension MainViewCell {
     private func setup() {
-        stackView = UIStackView(arrangedSubviews: [universityImageView, universityNameLabel])
+        stackView = UIStackView(arrangedSubviews: [universityNameLabel, universityURLLabel])
         
-        stackView.axis = .horizontal
+        stackView.axis = .vertical
         stackView.spacing = 5
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        
     }
+    
     private func layout() {
         addSubview(stackView)
         
         NSLayoutConstraint.activate([
             stackView.topAnchor.constraint(equalTo: topAnchor, constant: 5),
-            stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5),
+            stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 19),
             stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5),
-            stackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5)
+            stackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5),
         ])
     }
     
     private func configure() {
         guard let viewModel = self.viewModel else { return }
         
-        self.universityNameLabel.text = viewModel.name
+        if let name = viewModel.name {
+            self.universityNameLabel.text = name
+        } else {
+            self.universityNameLabel.text = "No Name Available."
+        }
+        
+        if let url = viewModel.url {
+            if let cleaned = url.host()?.replacingOccurrences(of: "www.", with: "") {
+                self.universityURLLabel.text = "\(cleaned)"
+            }
+        } else {
+            self.universityURLLabel.text = "No URL Available."
+        }
+        
     }
 }

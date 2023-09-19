@@ -6,7 +6,6 @@ extension MainViewController {
     
     func registerTableView() -> Void {
         tableView.register(MainViewCell.self, forCellReuseIdentifier: reuseIdentifier)
-        tableView.separatorStyle = .none
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -24,6 +23,6 @@ extension MainViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        return 50
     }
 }
