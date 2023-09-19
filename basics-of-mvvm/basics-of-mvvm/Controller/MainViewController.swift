@@ -13,6 +13,7 @@ class MainViewController: UITableViewController {
 }
 
 extension MainViewController {
+    
     private func configureView() {
         view.backgroundColor = .purple
     }
@@ -20,5 +21,9 @@ extension MainViewController {
     func setup() -> Void {
         configureView()
         registerTableView()
+    }
+    
+    func getData() {
+        viewModel.getData()
     }
 }
