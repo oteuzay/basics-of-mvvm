@@ -2,15 +2,17 @@ class MainViewModel {
     
     var dataResult: [University] = []
     
-    func getData(completion: @escaping([University]) -> Void) {
-        Service.getData { result in
+    func getData(completion: @escaping([University]?) -> Void) {
+        Service.getData { [weak self] result in
+            
+            guard let self = self else { return }
+            
             switch result {
-                
-            case .success(let dataResult):
-                self.dataResult = dataResult
-                completion(dataResult)
-            case .failure(let error):
-                print(error.localizedDescription)
+                case .success(let dataResult):
+                    self.dataResult = dataResult
+                    completion(self.dataResult)
+                case .failure(let error):
+                    print(error.localizedDescription)
             }
         }
     }

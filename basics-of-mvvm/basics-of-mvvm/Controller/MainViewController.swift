@@ -30,8 +30,10 @@ extension MainViewController {
     }
     
     func getData() {
-        viewModel.getData { result in
-            self.dataResult = result
+        viewModel.getData { [weak self] result in
+            guard let self = self else { return }
+            guard let resultData = result else { return }
+            self.dataResult = resultData
         }
     }
 }
